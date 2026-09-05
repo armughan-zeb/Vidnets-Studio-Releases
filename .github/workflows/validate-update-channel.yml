@@ -1,0 +1,35 @@
+name: Validate update channel
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate latest.json
+        shell: python
+        run: |
+          import json, re, urllib.parse
+          from pathlib import Path
+
+          manifest = json.loads(Path('latest.json').read_text(encoding='utf-8'))
+          assert manifest.get('schemaVersion') == 1
+          assert re.fullmatch(r'\d+\.\d+\.\d+', str(manifest.get('version', '')))
+          assert manifest.get('platform') == 'win32'
+          assert manifest.get('arch') == 'x64'
+          artifact = manifest.get('artifact') or {}
+          name = str(artifact.get('name', ''))
+          assert re.fullmatch(r'Vidzeo-Studio-\d+\.\d+\.\d+-Setup-x64\.exe', name)
+          url = urllib.parse.urlparse(str(artifact.get('url', '')))
+          assert url.scheme == 'https' and url.hostname == 'github.com'
+          assert f'/releases/download/v{manifest["version"]}/' in url.path
+          assert re.fullmatch(r'[0-9a-f]{64}', str(artifact.get('sha256', '')).lower())
+          size = artifact.get('size')
+          assert isinstance(size, int) and 10 * 1024 * 1024 <= size <= 2 * 1024 * 1024 * 1024
+          assert not any(secret in Path('latest.json').read_text().upper() for secret in ('API_KEY', 'SERVICE_ROLE', 'PASSWORD', 'TOKEN'))
+          print(f'validated Vidzeo Studio {manifest["version"]}: {name} ({size} bytes)')
