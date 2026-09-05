@@ -1,0 +1,6 @@
+# Large binaries belong in GitHub Release assets, not git history.
+artifacts/
+*.exe
+*.msi
+*.zip
+!RELEASE_NOTES.md
