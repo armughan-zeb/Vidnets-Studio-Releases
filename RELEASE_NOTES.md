@@ -2,4 +2,4 @@
 
 Windows x64 installer for the stable channel.
 
-SHA-256: `4a8dd53b8946bce8961733e348933cb01e4c0dd42129a5b15090b8ff6697c5c5`
+SHA-256: `70813053e4070ac5b7ef6025bea8b88f4874fbf3ae26136e4ae62465926e279a`
