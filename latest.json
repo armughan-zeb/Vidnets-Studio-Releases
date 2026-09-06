@@ -5,13 +5,13 @@
   "channel": "stable",
   "platform": "win32",
   "arch": "x64",
-  "releaseDate": "2026-09-06T13:41:13.426Z",
+  "releaseDate": "2026-09-06T14:35:47.271Z",
   "releasePage": "https://github.com/armughan-zeb/Vidnets-Studio-Releases/releases/tag/v1.0.0",
   "releaseNotes": "Vidnets Studio 1.0.0 for Windows.",
   "artifact": {
     "name": "Vidzeo-1.0.0-Setup-x64.exe",
     "url": "https://github.com/armughan-zeb/Vidnets-Studio-Releases/releases/download/v1.0.0/Vidzeo-1.0.0-Setup-x64.exe",
-    "size": 501641374,
-    "sha256": "6f675cd8e7d94a36664aa12d351cba45f7d024411d257138f0d1266c82282b4e"
+    "size": 501708136,
+    "sha256": "0a750d385fd9ee68311544bbe20df807aa967ef88499ea82b8b17c772e48a4c3"
   }
 }
