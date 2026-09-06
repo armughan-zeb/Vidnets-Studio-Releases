@@ -24,7 +24,7 @@ jobs:
           assert manifest.get('arch') == 'x64'
           artifact = manifest.get('artifact') or {}
           name = str(artifact.get('name', ''))
-          assert re.fullmatch(r'Vidzeo-Studio-\d+\.\d+\.\d+-Setup-x64\.exe', name)
+          assert re.fullmatch(r'Vidzeo-\d+\.\d+\.\d+-Setup-x64\.exe', name)
           url = urllib.parse.urlparse(str(artifact.get('url', '')))
           assert url.scheme == 'https' and url.hostname == 'github.com'
           assert f'/releases/download/v{manifest["version"]}/' in url.path
@@ -32,4 +32,4 @@ jobs:
           size = artifact.get('size')
           assert isinstance(size, int) and 10 * 1024 * 1024 <= size <= 2 * 1024 * 1024 * 1024
           assert not any(secret in Path('latest.json').read_text().upper() for secret in ('API_KEY', 'SERVICE_ROLE', 'PASSWORD', 'TOKEN'))
-          print(f'validated Vidzeo Studio {manifest["version"]}: {name} ({size} bytes)')
+          print(f'validated Vidnets Studio {manifest["version"]}: {name} ({size} bytes)')
