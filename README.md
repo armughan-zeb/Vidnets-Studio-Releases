@@ -1,6 +1,6 @@
 # Vidnets Studio Releases
 
-This repository is the stable update channel for Vidzeo Studio.
+This repository is the stable update channel for Vidnets Studio.
 
 - `latest.json` is fetched by the desktop app and contains the current version,
   installer URL, size, and SHA-256 checksum.
