@@ -15,6 +15,7 @@ Windows x64 installer for the stable channel.
 - Completed export reporting survives temporary network outages; failed jobs release their reservation.
 - Queue controls respect account ownership. Administrative database functions and the local admin dashboard have stronger access controls.
 - Removed the free-memory warning banners while keeping adaptive rendering safeguards.
+- Updated the Electron desktop runtime and build dependencies; the final npm audit reports zero known vulnerabilities.
 
 ## Verification
 
