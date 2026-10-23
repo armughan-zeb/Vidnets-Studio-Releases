@@ -1,22 +1,25 @@
-# Vidnets Studio 1.0.1
+# Vidnets Studio 1.0.2
 
-Windows x64 launch release.
+Windows x64 installer for the stable channel.
 
-- Includes the latest script-led media planning, YouTube recovery, web and stock fallback, and Remotion editing code.
-- Packages the section-joining helper required by the current Remotion renderer, including video and continuous audio export.
-- Keeps Qwen 3.5 Flash available through OpenRouter in Efficient mode.
-- Supports Lifetime Pro account access and the one-time $149 launch offer at https://vidnets.com/#pricing. Provider usage is separate.
+## Access and billing
+
+- Free Starter: five exports per calendar month, up to one minute each. No card or automatic billing.
+- Creator, Pro and Max monthly and yearly subscriptions alongside the $149 one-time Lifetime Pro offer.
+- Existing paid and lifetime access is preserved.
+- Clear, dismissible upgrade offers and verified checkout pricing.
+
+## Reliability and security
+
+- Account-level export reservations cover direct generation, queued jobs and editor exports.
+- Completed export reporting survives temporary network outages; failed jobs release their reservation.
+- Queue controls respect account ownership. Administrative database functions and the local admin dashboard have stronger access controls.
+- Removed the free-memory warning banners while keeping adaptive rendering safeguards.
 
 ## Verification
 
-The bundled backend started successfully, required runtime modules and assets were checked, and a short Remotion export passed. Installer bytes are verified against the SHA-256 below before the update channel is published.
+The installer includes its runtime. Packaged backend startup and a Remotion render were checked before release. Installer integrity is published in checksums.txt. The Windows installer is unsigned.
 
-## Requirements and review
+AI and media services may require your own provider settings and may have separate costs. Review generated media and rights before publishing.
 
-Windows 10/11, 64-bit, internet access, a Vidnets account with active access, and your provider credentials. Python, Node.js, FFmpeg and the Remotion browser are included. The installer is unsigned.
-
-YouTube coverage can remain below requested targets when candidates fail retrieval or relevance checks. Review media relevance, rights, narration, captions and the final edit before publishing. This release does not certify every niche or a clean-machine installation.
-
-Build: cb8a2fad4b749abb8dad59f8aa3c9d1188d7661010b2ec9bfd0a62525b0ec772
-SHA-256: 98beac040210bf1c560455ced47ffe56336831ad8b409e890e427995d5725971
-
+SHA-256: `2f2ad2fb9620fa045a639438432ab4a85a1e67bce6c84de9f7437b34157f4112`
