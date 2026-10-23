@@ -1,15 +1,22 @@
-# Vidnets Studio 1.0.0 — hardened generation build
+# Vidnets Studio 1.0.1
 
-Windows 10/11, x64. Bundled Python, Node.js, FFmpeg and Remotion browser.
+Windows x64 launch release.
 
-- One `/api/generate` request can produce and return the finished MP4.
-- Durable request IDs prevent duplicate paid generation when retrying completed requests.
-- Efficient mode uses Qwen 3.5 Flash; custom model selection remains available.
-- Bounded media research workers and a single export gate improve processing reliability.
-- Local response caching reduces repeated provider calls.
+- Includes the latest script-led media planning, YouTube recovery, web and stock fallback, and Remotion editing code.
+- Packages the section-joining helper required by the current Remotion renderer, including video and continuous audio export.
+- Keeps Qwen 3.5 Flash available through OpenRouter in Efficient mode.
+- Supports Lifetime Pro account access and the one-time $149 launch offer at https://vidnets.com/#pricing. Provider usage is separate.
 
-Existing account access and configured provider keys are required. Publishing this installer does not open checkout or grant a subscription. Windows may display an unknown publisher notice because this installer is unsigned.
+## Verification
 
-Build ID: `5cdb55dc97026c5102f8cb256ba866718fd582c25681d4a34bcaf90b72229ed7`
+The bundled backend started successfully, required runtime modules and assets were checked, and a short Remotion export passed. Installer bytes are verified against the SHA-256 below before the update channel is published.
 
-SHA-256: `28c5b266049516040eb8ca11584727a7f38c00aa7dca3fa0c2d0013eb03a720c`
+## Requirements and review
+
+Windows 10/11, 64-bit, internet access, a Vidnets account with active access, and your provider credentials. Python, Node.js, FFmpeg and the Remotion browser are included. The installer is unsigned.
+
+YouTube coverage can remain below requested targets when candidates fail retrieval or relevance checks. Review media relevance, rights, narration, captions and the final edit before publishing. This release does not certify every niche or a clean-machine installation.
+
+Build: cb8a2fad4b749abb8dad59f8aa3c9d1188d7661010b2ec9bfd0a62525b0ec772
+SHA-256: 98beac040210bf1c560455ced47ffe56336831ad8b409e890e427995d5725971
+
