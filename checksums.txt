@@ -1,1 +1,1 @@
-78bdd3286eb21b22cbe425dcdb466b478454328324a60e9dc8aa040750bb66f6  Vidzeo-1.0.2-Setup-x64.exe
+94b7ed2692dda9b829910be4d492e7fd8ea38e5ca4e4b48f5de3fd87b496ef16  Vidzeo-1.0.3-Setup-x64.exe
