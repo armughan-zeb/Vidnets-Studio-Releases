@@ -1,18 +1,18 @@
 {
   "schemaVersion": 1,
   "product": "Vidnets Studio",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "channel": "stable",
   "platform": "win32",
   "arch": "x64",
-  "releaseDate": "2026-10-25T06:42:42.314Z",
-  "releasePage": "https://github.com/armughan-zeb/Vidnets-Studio-Releases/releases/tag/v1.0.6-build.187664fdd01d",
-  "releaseNotes": "Vidnets Studio 1.0.6 for Windows.",
-  "buildId": "187664fdd01d01b994f79823d96f77d074ea51cd4b23bf37df6d29910cd3678b",
+  "releaseDate": "2026-10-25T16:59:22.556Z",
+  "releasePage": "https://github.com/armughan-zeb/Vidnets-Studio-Releases/releases/tag/v1.0.7-build.ed2aef1a3df5",
+  "releaseNotes": "Vidnets Studio 1.0.7 for Windows.",
+  "buildId": "ed2aef1a3df59f239a7856fafeb2fda7db74cd1916a51dfe98a236a9a5b5dc10",
   "artifact": {
-    "name": "Vidzeo-1.0.6-Setup-x64.exe",
-    "url": "https://github.com/armughan-zeb/Vidnets-Studio-Releases/releases/download/v1.0.6-build.187664fdd01d/Vidzeo-1.0.6-Setup-x64.exe",
-    "size": 644390542,
-    "sha256": "38788e5ef86e7b5ed4314f047cba3ffad99491586e0d13bc82f859647f160efa"
+    "name": "Vidzeo-1.0.7-Setup-x64.exe",
+    "url": "https://github.com/armughan-zeb/Vidnets-Studio-Releases/releases/download/v1.0.7-build.ed2aef1a3df5/Vidzeo-1.0.7-Setup-x64.exe",
+    "size": 644449041,
+    "sha256": "c1b4de610e4c712588e6f822ea35e16acd3d849e5af0a094e182c099b5eb5ae0"
   }
 }

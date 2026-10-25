@@ -1,19 +1,16 @@
-# Vidnets Studio 1.0.6
+# Vidnets Studio 1.0.7
 
-Windows maintenance release focused on media contract integrity, YouTube footage downloading, UI progress clarity, and grounded motion graphic fallbacks.
+Windows feature and stability release introducing natural speech silence shortening and modern documentary kinetic motion graphics with Remotion.
 
-## Fixed
+## New Features & Enhancements
 
-- **Grounded Motion Graphic Fallbacks Enabled**: Grounded graphics fallback is now fully enabled and accepted across the pipeline without being misclassified as rejected emergency media.
-- **Organization & League Subject Typing**: Sports leagues (NFL, NBA, MLB, FIFA, etc.), organizations, and franchises are now properly classified as organizational entities rather than individual human persons, eliminating false strict facial-identity rejection on sports and documentary B-roll.
-- **YouTube High-Risk Channel Over-Blocking Resolved**: Fixed overly broad uppercase acronym veto that inadvertently blocked official sports league and entertainment channels (such as NFL, NBA, UFC, F1, IGN).
-- **YouTube Format Fallback**: Added progressive and 480p format fallbacks in yt-dlp so videos without separate high-bitrate adaptive 720p+ streams no longer abort with format unavailable errors.
-- **Interactive UI Progress & Queue Overlay**: When a job pauses or requires action, the overlay clearly reports "Action needed" with the specific status and provides a one-click "Retry Video" button, eliminating confusing "Please wait / Preparing media" freezes.
+- **Audio Silence Remover for Sounds & Speech**: Added automatic natural silence shortening (>350-500ms shortened to ~200-250ms cadence) with 8ms raised-cosine crossfades to prevent clicks, word timing adjustments, and automatic Whisper alignment updates.
+- **Remotion Documentary Motion Graphics**:
+  - Kinetic dynamic typography with metric rolls and accent reveals.
+  - Documentary data and fact cards (`DataCard`, `FactCard`) with glassmorphism styling and verification indicators.
+  - Cinematic highlight callouts (`CinematicHighlight`, `CinematicCard`) with gold shimmer lighting and animated underline wipes.
+  - Two-phase smooth sine-eased Ken Burns zoom combo transitions with focal-point tracking.
+- **Remotion Player Runtime Update**: Rebuilt standalone player bundle with all registered motion graphics templates and aliases.
+- **Offline Bundled Runtime**: Bundled Python, Node.js, FFmpeg, and Remotion headless browser for complete out-of-the-box local rendering.
 
-## Verified
-
-- 32 Python regression tests passing, including tests for grounded graphic policies, organizational typing, format recovery, and queue reliability.
-- Full end-to-end documentary packaging and Remotion motion graphics verification.
-- Offline bundled runtime: Node.js, Python, FFmpeg, and Remotion headless browser.
-
-SHA-256: `38788e5ef86e7b5ed4314f047cba3ffad99491586e0d13bc82f859647f160efa`
+SHA-256: `c1b4de610e4c712588e6f822ea35e16acd3d849e5af0a094e182c099b5eb5ae0`
