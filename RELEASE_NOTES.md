@@ -1,25 +1,19 @@
-# Vidnets Studio 1.0.5
+# Vidnets Studio 1.0.6
 
-Windows maintenance release focused on Settings, generation reliability and media matching.
+Windows maintenance release focused on media contract integrity, YouTube footage downloading, UI progress clarity, and grounded motion graphic fallbacks.
 
 ## Fixed
 
-- Responsive Settings startup, bounded loading requests and encrypted provider-key persistence.
-- Working voice previews; free Edge and Fish 2.1 engines remain available. Retired Flux is removed from the supported choices.
-- Safer queue persistence, request deadlines, retrieval recovery and low-memory rendering without a fixed two-hour cutoff.
-- The desktop app verifies the backend build before connecting, preventing reuse of an older installed generation service.
-- More precise YouTube footage selection: named products require confirmed visual identity, and unrelated repair tutorials are excluded from driving/interior scenes. Requested game footage remains supported.
-- Generic processes such as anti-lock braking are distinguished from named vehicle models.
-- Grounded recovery graphics retain subject names and narration, fit their highlights, and avoid orphan-word text beats. Unsupported decorative diagrams become labelled illustrated summaries.
+- **Grounded Motion Graphic Fallbacks Enabled**: Grounded graphics fallback is now fully enabled and accepted across the pipeline without being misclassified as rejected emergency media.
+- **Organization & League Subject Typing**: Sports leagues (NFL, NBA, MLB, FIFA, etc.), organizations, and franchises are now properly classified as organizational entities rather than individual human persons, eliminating false strict facial-identity rejection on sports and documentary B-roll.
+- **YouTube High-Risk Channel Over-Blocking Resolved**: Fixed overly broad uppercase acronym veto that inadvertently blocked official sports league and entertainment channels (such as NFL, NBA, UFC, F1, IGN).
+- **YouTube Format Fallback**: Added progressive and 480p format fallbacks in yt-dlp so videos without separate high-bitrate adaptive 720p+ streams no longer abort with format unavailable errors.
+- **Interactive UI Progress & Queue Overlay**: When a job pauses or requires action, the overlay clearly reports "Action needed" with the specific status and provides a one-click "Retry Video" button, eliminating confusing "Please wait / Preparing media" freezes.
 
 ## Verified
 
-327 Python regression tests, four recovery-content checks, actual packaged Settings interaction, encrypted settings storage, production access-control checks and a packaged Remotion export.
+- 32 Python regression tests passing, including tests for grounded graphic policies, organizational typing, format recovery, and queue reliability.
+- Full end-to-end documentary packaging and Remotion motion graphics verification.
+- Offline bundled runtime: Node.js, Python, FFmpeg, and Remotion headless browser.
 
-A 58-second documentary completed with 12 resolved scenes, YouTube footage, web imagery, declared recovery graphics, narration, Remotion captions and sound effects. The final export has AAC audio and no detected sustained black intervals. Sampled frames were reviewed for text clipping and missing visuals.
-
-Generated videos still require editorial review for source accuracy and style. External provider availability varies; this release does not promise zero future bugs or automatic approval of every video.
-
-Lifetime Pro remains $149 once at launch. Private trials are granted by the administrator. Provider usage is configured and billed separately. Existing paid access is preserved.
-
-The installer includes its required runtime. Windows 10/11 x64; unsigned installer.
+SHA-256: `38788e5ef86e7b5ed4314f047cba3ffad99491586e0d13bc82f859647f160efa`
