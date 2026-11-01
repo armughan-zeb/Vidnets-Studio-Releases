@@ -1,16 +1,23 @@
-# Vidnets Studio 1.0.7
+# Vidnets Studio 1.0.8
 
-Windows feature and stability release introducing natural speech silence shortening and modern documentary kinetic motion graphics with Remotion.
+Windows x64 security and runtime update. Earlier installer releases were withdrawn; install the current build from this official release page.
 
-## New Features & Enhancements
+## Changes
 
-- **Audio Silence Remover for Sounds & Speech**: Added automatic natural silence shortening (>350-500ms shortened to ~200-250ms cadence) with 8ms raised-cosine crossfades to prevent clicks, word timing adjustments, and automatic Whisper alignment updates.
-- **Remotion Documentary Motion Graphics**:
-  - Kinetic dynamic typography with metric rolls and accent reveals.
-  - Documentary data and fact cards (`DataCard`, `FactCard`) with glassmorphism styling and verification indicators.
-  - Cinematic highlight callouts (`CinematicHighlight`, `CinematicCard`) with gold shimmer lighting and animated underline wipes.
-  - Two-phase smooth sine-eased Ken Burns zoom combo transitions with focal-point tracking.
-- **Remotion Player Runtime Update**: Rebuilt standalone player bundle with all registered motion graphics templates and aliases.
-- **Offline Bundled Runtime**: Bundled Python, Node.js, FFmpeg, and Remotion headless browser for complete out-of-the-box local rendering.
+- Removed administrative web tools, session secrets, and development-only files from the customer package.
+- Export usage settlement now requires a signed-in owner and verifies that the export belongs to that account.
+- Packaged builds no longer load private developer `.env` settings or enable local developer authentication.
+- Restricted desktop commands to the trusted app frame and blocked arbitrary local-file navigation.
+- Updated the bundled Python, Node.js, Electron, and Remotion browser runtimes.
 
-SHA-256: `c1b4de610e4c712588e6f822ea35e16acd3d849e5af0a094e182c099b5eb5ae0`
+## Verification
+
+- 87 regression tests plus 4 subtests passed; 4 desktop security tests passed.
+- Packaged backend checks confirmed that admin routes are unavailable and unsigned generation requests are rejected.
+- A packaged 18-frame Remotion render passed H.264 probing. Review generated videos for source accuracy and media availability before publishing.
+
+## Installation note
+
+This installer is unsigned. Windows may show an unknown-publisher or SmartScreen notice.
+
+SHA-256: `ff555a25ac2718e0cff821708ace18897b07452d599d6338645177595b49690b`
